@@ -1,42 +1,38 @@
-# Computer Vision Steering and Control System
+# Python OpenCV Car Steering Control System
 
 ## Overview
 
-This project consists of Python scripts for implementing a computer vision-based steering and control system. It utilizes OpenCV for image processing and keyboard emulation to control a virtual object based on the detected colors in the video stream.
-
-The project contains the following functionalities across multiple files:
-- **File 1**: Steering control using color detection for left, right, and nitro actions.
-- **File 2**: Keyboard emulation for sending key inputs.
-- **File 3**: Color detection and steering control with enhanced stability and efficiency.
+This Python application implements a car steering control system using OpenCV for color detection and contour tracking. The system allows users to control the car's movement using hand gestures captured by a webcam. Hand gestures for turning left, turning right, and activating nitro are detected and mapped to corresponding keyboard inputs for controlling the car in a gaming environment.
 
 ## Features
 
-- **Real-time Color Detection**: Detects specific colors in a live video stream using OpenCV.
-- **Steering Control**: Controls virtual steering based on the detected colors.
-- **Keyboard Emulation**: Emulates keyboard inputs for controlling virtual actions.
+- **Color Detection**: Detects specific colors (e.g., green) using OpenCV's HSV color space.
+- **Contour Tracking**: Tracks contours of detected colors to identify hand gestures.
+- **Steering Control**: Maps hand gestures to keyboard inputs for controlling the car's movement.
+- **Nitro Activation**: Activates nitro boost using a specific hand gesture.
 
 ## How to Use
 
-1. **Setup Environment**: Ensure Python is installed along with required libraries such as OpenCV, NumPy, and imutils.
+1. **Setup Environment**: Ensure you have Python installed along with necessary libraries (`numpy`, `cv2`, `imutils`, `directkeys`).
    
-2. **File Execution**:
-   - Execute File 1 to implement basic steering control using color detection.
-   - Execute File 2 to utilize keyboard emulation for sending key inputs.
-   - Execute File 3 for enhanced color detection and steering control.
+2. **Run the Code**: Execute the `steering.py` script to start the application. Ensure your webcam is connected and positioned correctly.
+   
+3. **Hand Gesture Control**: Use hand gestures in front of the webcam to control the car. Move your hand left to turn left, right to turn right, and perform a specific gesture to activate nitro.
 
-3. **Configure Parameters**: Adjust color thresholds and trackbar values for optimal detection performance.
-   
-4. **Run the Script**: Start the script and observe the video stream for color detection and steering control.
+## File Structure
+
+- `steering.py`: Main Python script that implements the car steering control system using OpenCV.
+- `color.py`: Python script for color detection and contour tracking using OpenCV.
+- `directkeys.py`: Python script defining functions for simulating keyboard inputs using ctypes.
 
 ## Dependencies
 
 - Python 3.x
-- OpenCV
-- NumPy
-- imutils
+- OpenCV (`cv2`)
+- NumPy (`numpy`)
+- Imutils (`imutils`)
 
 ## Contributing
 
-Contributions are welcome! If you encounter any issues or have suggestions for improvements, please feel free to open an issue or submit a pull request.
-
+Contributions are welcome! If you find any bugs or want to suggest enhancements, please open an issue or submit a pull request.
 
